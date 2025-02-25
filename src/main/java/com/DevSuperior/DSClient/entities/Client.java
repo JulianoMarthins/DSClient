@@ -22,11 +22,11 @@ public class Client {
 
 
     // Construtores
-    public Client(){
+    public Client() {
 
     }
 
-    public Client(Long id, String name, String cpf, Double income, LocalDate brithDate, Integer children){
+    public Client(Long id, String name, String cpf, Double income, LocalDate brithDate, Integer children) {
         this.id = id;
         this.name = name;
         this.cpf = cpf;
