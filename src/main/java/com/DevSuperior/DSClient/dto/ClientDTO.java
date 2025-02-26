@@ -24,8 +24,7 @@ public class ClientDTO {
 
 
     // Construtores
-    public ClientDTO(ClientDTO clientDTO) {
-
+    public ClientDTO() {
     }
 
     public ClientDTO(Long id, String name, String cpf, Double income, LocalDate brithDate, Integer children) {
