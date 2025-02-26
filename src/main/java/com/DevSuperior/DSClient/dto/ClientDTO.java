@@ -1,6 +1,5 @@
 package com.DevSuperior.DSClient.dto;
 
-
 import com.DevSuperior.DSClient.entities.Client;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.PastOrPresent;
@@ -19,7 +18,7 @@ public class ClientDTO {
     private String cpf;
     private Double income;
     @PastOrPresent(message = "Data deve ser no passado")
-    private LocalDate brithDate;
+    private LocalDate birthDate;
     private Integer children;
 
 
@@ -27,21 +26,21 @@ public class ClientDTO {
     public ClientDTO() {
     }
 
-    public ClientDTO(Long id, String name, String cpf, Double income, LocalDate brithDate, Integer children) {
+    public ClientDTO(Long id, String name, String cpf, Double income, LocalDate birthDate, Integer children) {
         this.id = id;
         this.name = name;
         this.cpf = cpf;
         this.income = income;
-        this.brithDate = brithDate;
+        this.birthDate = birthDate;
         this.children = children;
     }
 
-    public ClientDTO(Client client){
+    public ClientDTO(Client client) {
         id = client.getId();
         name = client.getName();
         cpf = client.getCpf();
         income = client.getIncome();
-        brithDate = client.getBrithDate();
+        birthDate = client.getBirthDate();
         children = client.getChildren();
     }
 
@@ -62,8 +61,8 @@ public class ClientDTO {
         return income;
     }
 
-    public LocalDate getBrithDate() {
-        return brithDate;
+    public LocalDate getBirthDate() {
+        return birthDate;
     }
 
     public Integer getChildren() {

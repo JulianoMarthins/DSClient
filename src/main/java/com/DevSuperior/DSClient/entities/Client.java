@@ -14,10 +14,9 @@ public class Client {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    @Column(unique = true)
     private String cpf;
     private Double income;
-    private LocalDate brithDate;
+    private LocalDate birthDate;
     private Integer children;
 
 
@@ -26,12 +25,12 @@ public class Client {
 
     }
 
-    public Client(Long id, String name, String cpf, Double income, LocalDate brithDate, Integer children) {
+    public Client(Long id, String name, String cpf, Double income, LocalDate birthDate, Integer children) {
         this.id = id;
         this.name = name;
         this.cpf = cpf;
         this.income = income;
-        this.brithDate = brithDate;
+        this.birthDate = birthDate;
         this.children = children;
     }
 
@@ -85,12 +84,12 @@ public class Client {
         this.income = income;
     }
 
-    public LocalDate getBrithDate() {
-        return brithDate;
+    public LocalDate getBirthDate() {
+        return this.birthDate;
     }
 
-    public void setBrithDate(LocalDate brithDate) {
-        this.brithDate = brithDate;
+    public void setBirthDate(LocalDate brithDate) {
+        this.birthDate = brithDate;
     }
 
     public Integer getChildren() {
