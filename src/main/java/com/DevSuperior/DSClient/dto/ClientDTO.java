@@ -14,11 +14,11 @@ public class ClientDTO {
     private static final Logger log = LoggerFactory.getLogger(ClientDTO.class);
     // Atributos
     private Long id;
-    @NotBlank
+    @NotBlank(message = "Campo Obrigatório")
     private String name;
     private String cpf;
     private Double income;
-    @PastOrPresent
+    @PastOrPresent(message = "Data deve ser no passado")
     private LocalDate brithDate;
     private Integer children;
 
